@@ -1,0 +1,139 @@
+Solar battery charger
+
+
+Solar energy systems have emerged as a viable source of renewable energy and are now widely used for a variety of industrial and domestic applications. Such systems are based on a solar collector, designed to collect the sun's energy to electric charge stored in re-chargeable batteries.
+
+Normal 0 false false false EN-US X-NONE X-NONE MicrosoftInternetExplorer4 Our solar battery charger is based on Series 
+
+Interrupting, Pulse Width Modulated (PWM) Design, which has following features :
+
+    * 16x2 LCD Display.
+    * 3 Nos. Alarm LEDs.
+    * Expansion connector for Battery, Load and Solar.
+    * 2 Nos. Triac IRF Z44N.
+    * Power-on Reset.
+    * Supply voltage : +12V, 600mA` from battery emulator.
+
+Software Features :  
+
+    *
+    * Microcontroller Based PWM 3 stage solar charging algorithm.
+    * LCD display for battery and PV array voltage and current indications.
+    * Electronic Overcharge Protection & back current blocking to PV panel.
+    * Low voltage battery disconnects and reconnects at DC output.
+      Over-discharge protection at DC output.
+
+
+Electrical energy stored in batteries can be used for various industrial and household applications :
+
+    * Deer feeder.
+    * Automobile.
+    * Motorcycle ATV.
+    * Truck.                              
+    * Fence charger.
+    * Personal watercraft.
+
+
+
+
+Algorithm
+
+1) Aftetr every 15 ms  On load battery voltage is checked .
+
+2) Battery state checker
+
+Batery state routine returns the condition of bnattery according to chart.
+
+
+Case 100 - Complete Charge
+
+Sicne our battery is completely charged we have to do following.
+
+1) Load is on.
+2) Load Indicator is on.
+3) Battery low indicator off.
+4) Battery charge Indicator off.
+5) Battergy charge mosfet of.
+6) Check for Over load.
+
+
+Case 75-50
+
+If its found that battery is 50-75% of its full charge condition then we have to do the following.
+
+1) Load is on.
+2) Load Indicator is on.
+3) Battery low indicator on.
+4) Stabilize batter for a predefined stabilization time.Durinf the stabilization time check battery voltage and give a feedback of battery state after stabiliation.
+5) Switch on the load. If in this condition battery is found to be lower than lowest load cut off voltage then
+Battery charging is on.Load cut off voltage is the condition when battery cannot power the load as per its rating and laod should be cut off to ensure prolonged battery life.
+
+
+Case 25-10-5
+
+If battery voltage lies in this category it means battery is in deep discharge and the load shoul be cut off.
+In this mode battery is first charge to a threshold value and then load is connected.
+
+
+
+Step 1 and 2 are repeated until the battery is charged completely.
+
+
+
+Power Connections
+
+1) Connect DC Power Jack to DC socket.
+2) Conenct Red wire to 8 V - 12 V DC voltage from your power supply or battery.
+3) Connect Balack wire to ground of your power supply or battery.
+
+4) Your LCD will Show Initialing screen and model nuber of Solar BAttery Charge .
+5) Battery states as defined in the agorithm.
+
+
+int battery_state(int ld)
+{                           
+    
+    //Check battery condiion while load is off 
+    if(ld==0)
+    {
+    
+    if(battv>12.650) return 100;
+    else if((battv<=12.65)&&(battv>12.45)) return 75;
+    else if((battv<=12.45)&&(battv>12.24)) return 50;
+    else if((battv<=12.24)&&(battv>12.06)) return 25;
+    else if((battv<=12.06)&&(battv>11.89)) return 15;
+    else if(battv<=11.89) return 5;
+    }
+    
+
+    if(ld==1)
+    {   
+    //Check battery condiion while load is oN     
+    if(battv>11.5) return 100;
+    else if((battv<=11.5)&&(battv>11.08))  return 75;
+    else if((battv<=11.08)&&(battv>10.87)) return 50;
+    else if((battv<=10.87)&&(battv>10.66)) return 25;
+    else if((battv<=10.66)&&(battv>10.45)) return 15;
+    else if(battv<=10.45) return 5;
+    }
+
+}          
+
+6) Voltage on battery AD is devided by 6 of the voltage on battery terminal.Battery AD is ADMUX 2
+
+7) #define _OLOAD 4
+
+8) Voltage on Solar Panel AD is devided by 6 of the voltage on Solar Panel terminal.SPV AD is ADMUX 3
+
+
+
+Revision 1.1
+
+1) PORTB.1 and PORTB.2 are pulled up(4K7) to enrgize MOSFET'S.
+
+#define LD_MOS PORTB.1
+#define BAT_MOS PORTB.2
+
+2) Over Load feedback pin ADMUX 4 of MCU is protected against reverse voltage with a 5.0 V zener and a 1K resistance in series.So that even if the overload voltage exceeds 5.0 V Microcontroller is not harmed.
+
+

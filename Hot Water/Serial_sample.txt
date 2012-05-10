@@ -1,0 +1,204 @@
+ *************************************
+
+        Embedded For You
+
+Hot Water Controller Version 1.0n
+website:www.embedded4u.com
+
+email:support@embedded4u.com
+
+*************************************
+
+
+
+>TIME 17:59:00
+TIME SET TO : 17:59:0
+
+
+>DATE 19:04:12
+DATE SET TO : 19:4:12
+
+
+>AL1 1
+ALARM1 set to 1
+
+
+>AL2 1
+ALARM2 set to 1
+
+>AL3 0
+ALARM3 set to 0
+
+
+>AL4 0
+ALARM4 set to 0
+
+
+>T1 18:02:00
+ALARM 1 TIME : 18:2:0
+
+
+>T2 18:03:00
+ALARM 2 TIME : 18:3:0
+
+
+>RUNSET 600460
+Over Temp. limit changed to : 460 C
+
+
+>RUN 1
+RUNNING IN AUTO MODE .. 0
+
+Over Temp. limit changed to : 460 C
+
+
+>Alarm 0 Time 18:2:0
+
+Alarm 0 Date 19:4:120
+
+Time 18:0:43
+
+Date 19:4:120
+
+Alarm 0 Time 18:2:0
+
+Alarm 0 Date 19:4:120
+
+Time 18:0:52
+
+Date 19:4:120
+
+18:2:0 
+
+18:2:1 
+
+18:2:2 
+
+18:2:3 
+
+18:2:4 
+
+18:2:5 
+
+18:2:6 
+
+18:2:7 
+
+18:2:8 
+
+18:2:9 
+
+18:2:10 
+
+18:2:11 
+
+Alarm 1 Time 18:3:0
+
+Alarm 1 Date 19:4:120
+
+Time 18:2:11
+
+Date 19:4:120
+
+Alarm 1 Time 18:3:0
+
+Alarm 1 Date 19:4:120
+
+Time 18:2:11
+
+Date 19:4:120
+
+18:2:12 
+
+18:2:13 
+
+18:2:14 
+
+18:2:15 
+
+18:2:16 
+
+18:2:17 
+
+18:2:18 
+
+18:2:19 
+
+18:2:20 
+
+18:2:21 
+
+18:2:22 
+
+18:2:23 
+
+18:2:24 
+
+18:2:25 
+
+18:2:26 
+
+18:2:27 
+
+18:2:28 
+
+18:2:29 
+
+18:2:30 
+
+18:2:31 
+
+18:2:32 
+
+18:2:33 
+
+18:2:34 
+
+18:2:35 
+
+18:2:36 
+
+18:2:37 
+
+18:2:38 
+
+18:2:39 
+
+18:2:40 
+
+*************************************
+
+        Embedded For You
+
+Hot Water Controller Version 1.0n
+website:www.embedded4u.com
+
+email:support@embedded4u.com
+
+*************************************
+
+
+
+>Alarm 0 Time 0:0:0
+
+Alarm 0 Date 0:0:0
+
+Time 12:13:29
+
+Date 18:12:116
+
+*************************************
+
+        Embedded For You
+
+Hot Water Controller Version 1.0
+
+website:www.embedded4u.com
+
+email:support@embedded4u.com
+
+*************************************
+
+
+
+>

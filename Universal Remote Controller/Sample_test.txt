@@ -1,0 +1,5 @@
+F720DF ( Code for 1)
+F7A05F ( Code for 2)
+F7609F ( Code for 3)
+F7C03F ( Code for On)
+F740BF ( Code for Off)

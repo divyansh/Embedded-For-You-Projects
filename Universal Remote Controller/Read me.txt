@@ -1,0 +1,121 @@
+A universal remote is a remote control that can be programmed to operate various 
+consumer electronic devices of different brands. Low-end universal remotes can only
+ control a set number of devices determined by their manufacturer, 
+while mid- and high-end universal remotes allow the user to program in new control codes to the remote.
+
+A universal remote control allows the user to control various consumer electronic products by programming new control codes to each switch of the remote. It has following features. 
+
+    * IR receiver (TSOP1838).
+    * IR transmitter.
+    * PC Connectivity using RS 232.
+    * Separate LEDs for status of Rx and Tx.
+    * Timer/Counter2 8-bit Timer in compare output mode.
+    * Timer/Counter1 16-bit Timer in Interrupt capture mode.
+    * Programmable Serial USART.
+    * 23 Programmable I/O Lines.
+
+Software Features :
+
+    * Programmable via external remote signal.
+    * 9 Keys/memory for storage of signal received.
+    * Can work as RC5 Receiver or RC5 Transmitter.
+    * PC connectivity to display decoded RC5 signal.
+    * Synchronization Led.
+
+
+Operation
+
+Universal Remote controller kit can be used to Recieve Infrared codes and store them.
+Please note Either Universal remote controller can work as a Transmitter or a Reciever.
+
+Seperate Demo codes to recieve the Code over Serial RS232 are written in IR remote control directoty.
+The code are Open source from www.arduini.cc community and distributed to you under LGPL licence.
+
+IRrecvDemo - IR reciever Demo
+
+
+Serial Connection - PC
+
+1) Connect Serial cable to PC.
+2) Set COM port baudrate to 9600 (8-1-N).
+
+
+
+Power Connections
+
+3) Connect DC Power Jack to DC socket.
+4) Conenct Red wire to 8 V - 12 V DC voltage from your power supply or battery.
+5) Connect Balack wire to ground of your power supply or battery.
+
+Hardware Test
+
+6) After power on and connecting your PC through serial cable to kit.
+Open Hyper Terminal Software on your computer.
+
+On Windowsd XP - Go to Start Menu -  Accessories - Hyper Terminal
+On Windows 7 - You will have to install the software. 
+Goto /Software folder and install serial-monitor.exe.
+
+
+7)Once your connections are made you will see.Following message on your Hyper terminal software screen.
+
+Embedded For You - Universal Remote Controller (Reciever) 
+
+8) Copy ../IRremote folder inside /arduino0021/libraries folder. ( Library Installation)
+
+9) Go to /examples/IRrecvDemo and open IRrecvDemo.pde .
+
+10) Press Remote Keys against the IR Reciever marked in the Setup_diagram.gif file.LED mounted besides the IR module
+will blink as an when the data is recieved. 
+
+
+11) Use your remote to press 1,2,3 and switches.
+
+12) Open Serial_sample.txt file.This is the sample of Serial data recieved over RS232 protocol.
+
+13) For example you recieve Code - '1FE50AF' when key 1 is pressed in remote.
+
+14) Store this code and use IR Transmitter to send to code back using IRsendDemo.
+
+InfraRed Send Demo
+
+Hardware Description
+
+Keys are Implemented on Analog Pin AD0 and AD1.When no key is pressed the defauilt voltage is 5.0 on each ADC.
+Keys are detected by change in voltage on the particular ADC.
+
+Pin Description
+
+Keys S4,S7,S8,S9    are on AD0
+Keys S1,S2,S3,S5,S6 are on AD1
+
+15) Go to /examples/IRSendDemo and open IRSendDemo.pde.
+
+16) Voltage output of each pin is defined in the routine.
+
+#define S1 439//1
+#define S2 1583//1
+#define S3 2492//1
+#define S4 894 //0
+#define S5 3660//1
+#define S6 //1
+#define S7 1778//0
+#define S8 2995//0
+#define S9 3855//0
+
+17) When we press a particluar kit get_key fuinction returns its particluar number.
+
+18) Next we use simple Switch/case routine to send the corresponding codes whcih we obtained from IRRecvdemo.pde.
+
+19) Youi wil notice irsend.sendNEC(Code, Number of bits ) function.
+The 'code' is a hexadeciombnal value which denotes the IR code which is to be send and 'Number of Bits' denote the length of the code.
+
+20) Use IRtest.pde to determine the Type of remote and length of IR signal recieved.
+
+
+
+
+Revision 1.0
+Changes in Transmitter and Receiver pin
+IR receiver connected to PD.2 - ESAT-ISP Pin number D2(2)
+IR transmitter connected to PORTD.3 - ESAT-ISP Pin number D3(3)

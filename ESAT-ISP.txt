@@ -1,0 +1,11 @@
+Instruction to compile and run
+
+Download ESAT-ISP ppt from http://www.slideshare.net/embedded4u/esat-isp link.
+
+Follow all instruction to Install the drivers of ESAT-ISP.
+
+Note : 
+
+Some Libraries of Mechatronics Trainer \ Music MIMIC and Universal Remote Controller are run using device series Mega88/168/328.
+
+For changing Microcontroller please change the name of the MCU in board.txt in \Arduino-021\hardware\arduino\boards.txt.

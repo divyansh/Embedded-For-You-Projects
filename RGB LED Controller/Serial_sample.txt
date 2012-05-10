@@ -1,0 +1,22 @@
+*************************************
+        Embedded For You
+RGB LED Controller with Remote
+website:www.embedded4u.com
+email:support@embedded4u.com
+*************************************
+
+>VALUE :542 66
+VALUE :942 66
+VALUE :55c 92
+VALUE :94c 76
+VALUE :546 70
+VALUE :14a2 162
+VALUE :12ae 174
+VALUE :95c 92
+VALUE :554 84
+VALUE :954 84
+VALUE :546 70
+VALUE :14a2 162
+VALUE :12ae 174
+VALUE :95c 92
+

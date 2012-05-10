@@ -1,0 +1,5 @@
+Embedded For You - Universal Remote Controller (Reciever) 
+1FE50AF ( Code For 1)
+1FED827 ( Code For 2)
+1FEF807 ( Code For 3)
+1FE48B7 ( Code For Off)

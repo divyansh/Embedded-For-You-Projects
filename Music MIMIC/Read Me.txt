@@ -1,0 +1,32 @@
+Music MIMIC project provides a hardware solution for altering the pitch of the played music. This project provides easy Voice removal, Selective Instrument removal and Karaoke Effect.
+
+Features :
+
+    * On board Variable Karaoke.
+    * 5 band Graphic Equalizer.
+    * External & On board MIC with volume control.
+    * 8x8 LED Array. 
+
+Music MIMIC applications.
+
+    * Moving message display.
+    * Graphic Equalizer.
+    * Audio Spectrum Analyzer - Studying Music nodes and frequencies.
+    * Equalizer for Both Live and Playback music.
+    * Moving Message Display.
+    * 8 x 8 Led Cube.
+
+1) Connect the connections as shown in Setup_diagram.gif.
+
+2) Unzip frequencytimer2.zip file in ..\arduino-0021\libraries folder.
+
+3) Kindly downlaod Music_MIMIC folder inside ..\arduino-0021\libraries folder.
+
+4) Close all present windows od Arduino and re-open them.
+
+5) Follow all instructions in ESAT-ISP.txt to setup and compile the software using ESAT-ISP.
+
+5) For IC Mega328p kindly use Avrdude_gui software present in software folder to erase the device inpalce of Khazama Programmer.
+
+
+

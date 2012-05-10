@@ -1,0 +1,59 @@
+*************************************
+
+        Embedded For You
+
+Intelligent Mized Signal PLC Version 1.0
+
+website:www.embedded4u.com
+
+email:support@embedded4u.com
+
+*************************************
+
+SELECT - STARTHELP PLC
+
+MODE   - STOP PLC
+
+UP     - PLC Channel Increment
+
+DOWN   - PLC Channel Decrement
+
+
+Syntax:
+
+>AD1 1200.0 
+
+To set Limit of Analog channel 1 to 1200 mv
+
+>TEMP 200.0 
+
+To set Temprature Limit for analog channel (OUT0) to 200 Celsius
+
+>RUN
+
+To START PLC operation
+
+>STOP
+
+To STOP PLC operation
+
+
+Default Limit set to 4700mV
+
+*************************************
+
+
+
+>STOP //Enter or CTRL + Enter
+>RUN  //Enter or CTRL + Enter
+RUN PLC... //Message from board
+
+>Default Limit set to 4700mV //Enter or CTRL + Enter
+
+AD1 2500 //Enter or CTRL + Enter
+ADC01 limit set to : 2500.0 mv 
+
+>STOP //Enter or CTRL + Enter
+STOP PLC...
+
+>
